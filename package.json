@@ -1,0 +1,14 @@
+{
+  "name": "udacity",
+  "version": "1.0.0",
+  "description": "Homepage",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass":"node-sass sass/main.scss style.css -w"
+  },
+  "author": "Daughty",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
+}

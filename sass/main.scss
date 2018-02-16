@@ -1,0 +1,574 @@
+
+
+$color-primary: #03CBBA;
+$color-primary-light: #649EC5;
+$color-primary-dark:rgb(208, 130, 231);
+$color-white:#fff;
+$color-grey:#777;
+$color-black:#000;
+
+$color-blue-primary:rgba(14, 26, 76, 0.5);
+$color-blue-secondary:rgba(43, 74, 153, 0.5);
+
+$card1-color:rgba(26, 165, 203, 0.801);
+
+
+$grid-width:112rem;
+$gutter-vertical:9rem;
+$gutter-vertical1:12rem;
+
+$gutter-horizontal:4rem;
+$gutter-horizontal1:3rem;
+
+
+
+
+@mixin clearfix
+{
+    &::after
+    {
+       content:"";
+       display:table;
+       clear:both;
+    }
+}
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px; }
+
+body {
+  font-family: "Open Sans" , sans-serif;
+  font-weight: 100;
+  /* font-size: 16px;*/
+  line-height: 1.7;
+  color:$color-grey;
+   }
+
+.header {
+  height: 100vh;
+  background-image: linear-gradient(-45deg,$color-primary-dark,$color-primary-light,$color-primary);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 49vh, 0 100%);
+  z-index:1;
+  margin-bottom:12rem;
+ }
+  .header__logo-box {
+    position: absolute;
+    top: 3rem;
+    left: 8rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    transform: translate(-20%,-80%);
+    text-align:center; }
+
+.heading-primary {
+  color:$color-white;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    margin-bottom: 2rem;
+  }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: .03rem;}
+
+   .header__link-box
+    {   position:absolute;
+        top:5%;
+        left: 45%;
+        transform:translate(0,-10%);
+        text-align: center;
+        
+    }
+
+    .header__link-box a 
+     {
+          color:$color-white;
+          text-decoration: none;
+          font-size: 1.5rem;
+          font-weight: 400;
+          letter-spacing: .02rem;
+          margin:1rem;
+          padding:1rem;
+      }
+
+    .header__link-box button
+    {
+          background-color:#02CCBA;
+          color:$color-white;
+          height:3.5rem;
+          width:12rem;
+          border-radius:.4rem;
+          font-size:1.4rem;
+          padding:.5rem;
+          text-align: center;
+          margin:.5rem;
+          box-shadow: rgba(0, 0, 0, 0.2);
+    }
+
+
+    .header__link-box button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .header__link-box button:hover::after {
+          transform: scaleX(1.4) scaleY(1.6);
+          opacity: 0; }
+      
+        .header__link-box button:active {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+
+        .row
+        {
+          display:block;
+          position:absolute;
+          width:$grid-width;
+          margin:0 auto;
+          margin-bottom:$gutter-vertical;
+          top:24rem;
+          left:8rem;
+          z-index:1;
+
+          &:not(:last-child)
+          {
+              margin-bottom:$gutter-vertical;
+          }
+           
+          @include clearfix;
+
+          [class^="col-"]
+          {
+             
+              float:left;
+
+              &:not(:last-child)
+              {
+                  margin-right:$gutter-horizontal;
+              }
+          }
+          
+          .col-1-of-4
+          {
+              width:calc((100% - 3 * #{$gutter-horizontal})/4);
+          }
+          .col-3-of-4
+          {
+            width:calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal}); 
+           }
+        
+           
+}
+
+
+    
+            .feature-box
+            {
+                background-image:url(images/neural2.jpg);
+                position:relative;
+                text-align: center;
+                padding:10rem;
+                border-radius:5px;
+                box-shadow: 0 1.5rem 4rem rgba($color-black, .30);
+                
+            
+                .heading-ter--main1
+                {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    letter-spacing: .05rem;
+                    color:$color-white;
+                    text-transform: uppercase;
+                    margin-bottom:3rem;
+                    margin-top:3rem;
+                }
+
+                .heading-ter--main2
+                {
+                    font-size: 2.4rem;
+                    font-weight: 300;
+                    letter-spacing: .1rem;
+                    color:$color-white;
+                    margin-bottom:2rem;
+                  
+                }
+
+                .heading-ter--para
+                {   
+                    font-size: 1.5rem;
+                    font-weight:500;
+                    letter-spacing: .03rem;
+                    color:$color-white;
+                    margin-bottom:2rem;
+                
+                    
+                }
+
+                .heading-ter--button
+                {
+                    margin-bottom:5rem;
+                    background-color:$color-white;
+                    color:#02CCBA;
+                    height:4rem;
+                    width:28rem;
+                    border-radius:.4rem;
+                    font-size:1.4rem;
+                    padding:.5rem;
+                    text-align: center;
+                }
+                
+            }
+
+            [class^="card-"]
+            {
+                 background-color:$color-white;
+                 border-radius:5px;
+                 margin-bottom:3rem;
+                 padding:1rem;
+                 width:35rem;
+                 height:13.5rem;
+                 box-shadow: 0 1.5rem 4rem rgba($color-black, .30);
+                 position:relative;
+                 
+
+                 &:not(:last-child)
+                 {
+                     margin-bottom:3rem;
+                 }
+                
+
+
+                h1{
+                    position:absolute;
+                    top:5rem;
+                    left:15rem;
+                    color:$color-black;
+                    font-size:1.7rem;
+                    font-weight:600;
+                    letter-spacing:.02rem;
+                    float:left;
+                    
+                 }
+                  h3{
+                     position: absolute;
+                     top:1rem;
+                     left:15rem;
+                     color:#02CCBA;
+                     font-size:1rem;
+                     font-weight:600;
+                     margin-top:1.5rem;
+                     margin-bottom:.5rem;
+                     float:left;
+                 }
+                 img
+                 {    position:absolute;
+                      top:.5rem;
+                      width:12rem;
+                      height:12rem;
+                      padding:1rem;
+                 }
+                
+            }
+                .category
+                {
+                    text-align: center;
+                    color:$color-black;
+                    position:relative;
+                   
+
+                    h1 {
+                    font-size:3rem;
+                    font-weight:100;
+                    line-height:1.7rem;
+                    margin-bottom:5rem;
+                    }
+
+                    button
+                    {
+                       padding:1.2rem;
+                       font-size:1rem;
+                       text-transform: uppercase;
+                       font-weight:600;
+                       letter-spacing:.15rem;
+                       margin:.5rem;
+                       border-radius:.5rem;
+                       text-align: center;
+                     }
+                    
+                }
+
+       
+      
+
+                .row1
+                { 
+                  display:block;
+                  
+                  width:126rem;
+                  
+                  margin:8rem;
+                  margin-bottom:$gutter-vertical;
+                  
+        
+                  &:not(:last-child)
+                  {
+                      margin-bottom:$gutter-vertical;
+                  }
+                  .col-1-of-3
+                    {
+
+                     width:40rem;
+                     
+                     float:left;
+                    }
+
+                   
+                  @include clearfix;
+
+                }   
+            
+
+                    [class^="card-box"]
+                    {   
+                        
+                        border-radius:.8rem;
+                        height:35.6rem;
+                        width:36rem;
+                    
+                        
+                        img{
+                           position:absolute;
+                          
+                           background-size:cover;
+                           top:0;
+                           left:0;
+                           height:15.6rem;
+                           width:36rem; 
+                           padding:0;
+                           border-radius:.8rem .8rem 0 0;
+                        
+                          }
+                        h1{
+                            display:inline;
+                            position:absolute;
+                            top:20rem;
+                            left:2rem;
+                           
+                            padding:1rem;
+                            font-size:2rem;
+                            letter-spacing:.2rem;
+                            font-weight:400;
+                            color:$color-black;
+                        }
+                    }
+                    
+                .img1{
+                    background-image: linear-gradient(45deg,$card1-color,$card1-color) ,url("images/card1.jpg");
+                }
+
+                .img2{
+                    background-image: linear-gradient(45deg,rgba(20, 182, 166, 0.808),rgba(20, 182, 166, 0.808)) ,url("images/card2.jpg");
+                }
+                .img3{
+                    background-image: linear-gradient(45deg,rgba(180, 110, 237, 0.801),rgba(180, 110, 237, 0.801)) ,url("images/card3.jpg");
+                }
+                .img4{
+                    background-image: linear-gradient(45deg,rgba(124, 132, 148, 0.801),rgba(124, 132, 148, 0.801)) ,url("images/card4.jpg");
+                }
+                .img5
+                {
+                    background-image: linear-gradient(45deg,rgba(233, 165, 82, 0.808),rgba(233, 165, 82, 0.808)) ,url("images/card5.jpg");
+                }
+                .img6
+                {
+                    background-image: linear-gradient(45deg,rgba(230, 101, 144, 0.808),rgba(230, 101, 144, 0.808)) ,url("images/card5.jpg");
+                }
+            
+        .future
+        {
+            background-image:linear-gradient(to right bottom,#02B4E2,#02C9BE);
+            height:38rem;
+            max-width:100%;
+            text-align:center;
+            padding:6rem;
+        
+            .card
+            {
+                height:24rem;
+                width:95rem;
+                border-radius:.5rem;
+                margin:auto;
+                position:relative;
+            
+                img{
+                    position:absolute;
+                    top:8rem;
+                    left:7rem;
+                }
+                h1{
+                    position: absolute;
+                    top:7rem;
+                    left:19rem;
+                    font-size:3rem;
+                    font-weight:200;
+                    color:#02C9BE;
+                    margin-bottom:2rem;
+                }
+                p{
+                    position: absolute;
+                    
+                    top:12rem;
+                    left:19rem;
+                    float:left;
+                    font-size:1.5rem;
+                    font-weight:400;
+                    color:$color-grey;
+                    letter-spacing:.05rem;
+                    
+                }
+                .btn{
+                    position:absoulte;
+                    top:12rem;
+                    right:30rem;
+                    background-color:#02B4E2;
+                    color:$color-white;
+                    height:5rem;
+                    width:19rem;
+                    font-size:1.6rem;
+                    margin-top:10rem;
+                    margin-left:65rem;
+                    border-radius:.2rem;
+                    box-shadow: rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+
+         
+
+            .row2
+            { 
+              display:block;
+              
+              width:100rem;
+              padding:1rem;
+              margin-left:20rem;
+              margin-bottom:$gutter-vertical1;
+              
+    
+              &:not(:last-child)
+              {
+                  margin-bottom:$gutter-vertical1;
+              }
+              .col-1-of-2
+                {
+
+                 width:calc((100% - #{$gutter-horizontal1})/2);
+                 
+                 float:left;
+                }
+
+                
+               
+              @include clearfix;
+ }  
+
+            
+
+            .advantages
+            {
+                font-size:3rem;
+                font-weight:100;
+                color:#02C9BE;
+                text-align:center;
+                margin:8rem;
+                
+            }
+
+            img{
+                box-shadow: rgba(0, 0, 0, 0.2);
+                
+            }
+
+            .heading-fourth
+            {
+                font-size:3rem;
+                font-weight:100;
+                color:#02C9BE;
+                padding:.5rem;
+                
+                
+            }
+            .para
+            {
+                font-size:1.4rem;
+                color:$color-black;
+                font-weight:100;
+                display: inherit;
+                padding:.5rem;
+                
+                 
+            }
+
+            .composition
+            {
+                position:relative;
+                margin:2rem;
+                margin-bottom:8rem;
+                
+                
+             &__photo
+             {
+                 
+                  box-shadow:0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+                  position:absolute;
+               &--p1
+               {   width:70%;
+                   right:4rem;
+                   top:-4rem;
+               }
+
+               &--p2
+               {
+                   width:60%;
+                   left:0;
+                   top:8rem;
+               }
+
+               &--p11
+               {     width:60%;
+                     right:4rem;
+                     top:8rem;
+
+
+               }
+               &--p12
+               {
+                   width:70%;
+                   left:0;
+                   top:-4rem;
+               }
+             }   
+            }
+
+          
+
+        
