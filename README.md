@@ -1,5 +1,5 @@
 # udacity
-Homepage template of udacity website.
+Homepage clone of udacity website.
 
 
 Install Node-js on the system.
