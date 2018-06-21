@@ -12,6 +12,6 @@
   "author": "Daughty",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.7.2"
+    "node-sass": "^5.7.1"
   }
 }
