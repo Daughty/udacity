@@ -6,7 +6,7 @@
   
   "scripts": {
     "compile:sass":"node-sass sass/main.scss style.css -w",
-    "start": "node index.js"
+    "start": "homepage.html"
    },
   
   "author": "Daughty",
