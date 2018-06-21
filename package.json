@@ -2,11 +2,11 @@
   "name": "udacity",
   "version": "1.0.0",
   "description": "Homepage",
-  "main": "index.js",
+  "main": "server.js",
   
   "scripts": {
     "compile:sass":"node-sass sass/main.scss style.css -w",
-    "start": "homepage.html"
+    "start": "server.js"
    },
   
   "author": "Daughty",
