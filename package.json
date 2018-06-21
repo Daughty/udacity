@@ -3,15 +3,10 @@
   "version": "1.0.0",
   "description": "Homepage",
   "main": "index.js",
-  "engines": {
-    "node": "8.9.4",
-    "npm": "5.7.1"
-  },
+  
   "scripts": {
     "compile:sass":"node-sass sass/main.scss style.css -w",
-    "start": "node server.js"
-    
-  },
+   },
   
   "author": "Daughty",
   "license": "ISC",
