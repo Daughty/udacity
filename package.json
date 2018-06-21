@@ -8,7 +8,8 @@
   "moment": "^2.15.1"
 },
   "engines": {
-    "node": "8.9.4"
+    "node": "8.9.4",
+    "npm": "5.7.1"
   },
   "scripts": {
     "compile:sass":"node-sass sass/main.scss style.css -w",
