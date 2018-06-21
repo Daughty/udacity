@@ -9,7 +9,7 @@
 },
   "engines": {
     "node": "8.9.4"
-  }
+  },
   "scripts": {
     "compile:sass":"node-sass sass/main.scss style.css -w",
     "start": "node server.js"
@@ -19,6 +19,6 @@
   "author": "Daughty",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^5.7.1"
+    "node-sass": "^4.7.2"
   }
 }
